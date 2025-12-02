@@ -13,7 +13,7 @@ jobs:
           pip install pytest pytest-playwright
           playwright install --with-deps
       - name: Run Playwright tests
-        run: pytest --html=playwright-report/report.html --self-contained-html -n auto --headed=false
+        run: pytest --html=playwright-report/report.html --self-contained-html -n auto
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
